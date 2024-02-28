@@ -13,16 +13,15 @@ const OurRwandaCompanies = () => {
     <div className="bg-[#F3F3F3] py-6 lg:py-16">
       <CenterContent>
         <div>
-          <h3 className="text-xl">Our Companies in Rwanda</h3>
+          <h3 className="text-xl">Our subsidiaries in Rwanda</h3>
           <div className="lg:mt-4 grid grid-cols-1 lg:grid-cols-2 gap-14">
             <div className="hidden mt-5 lg:block">
               <p>
-                Lorem ipsum dolor sit amet consectetur. Fusce urna non est tortor tortor faucibus
-                fusce amet suspendisse. Duis vitae et a mauris odio. Mollis condimentum integer
-                tincidunt etiam faucibus enim porta sed faucibus. Pharetra ut tortor egestas
-                convallis vitae dignissim pellentesque. Tellus mauris nullam odio viverra vel lectus
-                odio consectetur sit. Diam scelerisque est odio donec in pharetra enim justo purus.
-                Suscipit mauris leo nisl nibh proin amet cum.
+                Since our inception in 2009, Byuda Holdings has woven a legacy of excellence,
+                innovation, and social responsibility. Rooted in a vision to create a positive
+                impact, our journey began with the birth of our first subsidiary, FCC (The First
+                Cleaning Company). Over the years, we&apos;ve diversified our portfolio, embracing
+                sectors that redefine industries and uplift communities.
               </p>
             </div>
             <div className="flex flex-wrap justify-center mt-5 gap-x-10 gap-y-6">

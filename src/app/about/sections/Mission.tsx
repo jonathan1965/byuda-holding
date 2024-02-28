@@ -4,17 +4,17 @@ const companyInfo = [
   {
     heading: "Mission",
     description:
-      "Byuda Holdings, is a multifaceted holding company with a passion for nurturing and steering businesses across diverse sectors.",
+      "Our mission is to lead and inspire positive change in the business landscape by nurturing innovative ventures across diverse industries, consistently delivering value to our economic uphold.",
   },
   {
     heading: "Vision",
     description:
-      "Byuda Holdings, is a multifaceted holding company with a passion for nurturing and steering businesses across diverse sectors.",
+      "At Byuda Holdings, we envision a future where excellence, integrity, and social responsibility converge to foster a sustainable and prosperous Africa.",
   },
   {
     heading: "Sustainability",
     description:
-      "Byuda Holdings, is a multifaceted holding company with a passion for nurturing and steering businesses across diverse sectors.",
+      "We want to prioritize eco-friendly practices, champion social responsibility, and innovate for a greener future.",
   },
 ];
 
@@ -24,9 +24,12 @@ const Mission = () => {
       <CenterContent>
         <div className="flex overflow-scroll text-white grid-cols-3 gap-7">
           {companyInfo.map((info, index) => (
-            <div className="bg-[#911320] flex-shrink-0 w-full sm:w-[450px] py-6 pl-7 pr-10 rounded-xl" key={index}>
+            <div
+              className="bg-[#911320] flex-shrink-0 w-full sm:w-[450px] py-6 pl-7 pr-10 rounded-xl"
+              key={index}
+            >
               <span className="text-2xl">{info.heading}</span>
-              <p className="mt-6">{info.description}</p>
+              <p className="mt-6 text-white/75">{info.description}</p>
             </div>
           ))}
         </div>

@@ -12,28 +12,28 @@ const services = [
     title: "Hygiene Services",
     coverImage: hygieneCover,
     desciption:
-      "Lorem ipsum dolor sit amet consectetur. Est sit non in convallis. Imperdiet cum diam dignissim egestas egestas varius.",
+      "Maintaining a clean and healthy workplace is not only a matter of aesthetics but also a crucial factor in promoting the well-being of employees and visitors. ",
     learnMorePath: "hygiene",
   },
   {
     title: "Labour Services",
     coverImage: labourServiceCover,
     desciption:
-      "Lorem ipsum dolor sit amet consectetur. Est sit non in convallis. Imperdiet cum diam dignissim egestas egestas varius.",
+      "Dynamic services solution (DSS) is a leading provider of outsourced labour services, dedicated to helping businesses streamline their operations and enhance productivity. ",
     learnMorePath: "labour",
   },
   {
     title: "Agribusiness",
     coverImage: agribussinessCover,
     desciption:
-      "Lorem ipsum dolor sit amet consectetur. Est sit non in convallis. Imperdiet cum diam dignissim egestas egestas varius.",
+      "Keza Farmers Pride is a trailblazing force in the agricultural sector with a focus on seamless supply chain of agro-produce from farmers across the country to new markets",
     learnMorePath: "agribusiness",
   },
   {
     title: "Manufacturing",
     coverImage: manufacturingCover,
     desciption:
-      "Lorem ipsum dolor sit amet consectetur. Est sit non in convallis. Imperdiet cum diam dignissim egestas egestas varius.",
+      "Ishami factory encompasses various stages of tobacco processing, from cultivation to packaging, ensuring efficiency and precision throughout the production chain.",
     learnMorePath: "manufacturing",
   },
 ];

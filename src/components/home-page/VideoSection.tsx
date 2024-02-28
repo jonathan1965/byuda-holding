@@ -7,15 +7,16 @@ const VideoSection = () => {
         <div className="grid lg:grid-cols-2 gap-5 lg:gap-20">
           <div className="order-2 lg:text-lg lg:order-1">
             <p>
-              Lorem ipsum dolor sit amet consectetur. Tincidunt metus sapien neque eu aliquet cursus
-              urna. Et pellentesque nam lectus imperdiet suspendisse augue nisi id. Est quis neque
-              vitae vehicula amet. Mi at sit tristique suspendisse habitant augue aliquam tellus.
-              Urna elit mauris quis risus etiam libero volutpat odio etiam. Turpis viverra dignissim
-              risus sed odio.
+              Byuda Holdings, is a dynamic and diversified holding company at the forefront of
+              driving innovation, growth, and sustainability across various sectors. Born in 2009 as
+              Byuda Group, our journey began with a vision to create a conglomerate that not only
+              excels in its individual domains but also contributes significantly to the economic
+              and social development of the communities we serve.
             </p>
             <p className="mt-5">
-              Mi at sit tristique suspendisse habitant augue aliquam tellus. Urna elit mauris quis
-              risus etiam libero volutpat odio etiam. Turpis viverra dignissim risus sed odio.
+              Established in 2009, Byuda Holdings took its first step into the business landscape
+              with the creation of its inaugural subsidiary, FCC. This marked the beginning of a
+              journey fueled by passion, vision, and a commitment to excellence.
             </p>
           </div>
           <iframe

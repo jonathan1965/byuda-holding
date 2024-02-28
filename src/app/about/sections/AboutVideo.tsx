@@ -17,14 +17,16 @@ const AboutVideo = () => {
           ></iframe>
           <div className="text-lg">
             <p>
-              Byuda Holdings, is a multifaceted holding company with a passion for nurturing and
-              steering businesses across diverse sectors. With a strong foundation in numerous
-              service sectors ranging from Hygiene, Agriculture, Skilled labour, Manufacturing, all
-              the way to Architectural Interior design.
+              Byuda Holdings, is a dynamic and diversified holding company at the forefront of
+              driving innovation, growth, and sustainability across various sectors. Born in 2009 as
+              Byuda Group, our journey began with a vision to create a conglomerate that not only
+              excels in its individual domains but also contributes significantly to the economic
+              and social development of the communities we serve.
             </p>
             <p className="mt-5">
-              We are at the forefront of creating an ecosystem that thrives on excellence,
-              innovation, and sustainability.
+              Established in 2009, Byuda Holdings took its first step into the business landscape
+              with the creation of its inaugural subsidiary, FCC. This marked the beginning of a
+              journey fueled by passion, vision, and a commitment to excellence.
             </p>
           </div>
         </div>

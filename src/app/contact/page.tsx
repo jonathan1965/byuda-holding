@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import CenterContent from "@/components/layouts/CenterContent";
 import PageBreadcrumb from "@/components/shared-sections/PageBreadcrumb";
 import { FaRegClock } from "react-icons/fa";
@@ -14,12 +15,17 @@ function page() {
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
             <div className="w-full">
               <p className="text-justify">
-                Lorem ipsum dolor sit amet consectetur. Fusce urna non est tortor tortor faucibus
-                fusce amet suspendisse. Duis vitae et a mauris odio. Mollis condimentum integer
-                tincidunt etiam faucibus enim porta sed faucibus. Pharetra ut tortor egestas
-                convallis vitae dignissim pellentesque. Tellus mauris nullam odio viverra vel lectus
-                odio consectetur sit. Diam scelerisque est odio donec in pharetra enim justo purus.
-                Suscipit mauris leo nisl nibh proin amet cum.
+                Have a question, need assistance, or just want to share your thoughts? We're here to
+                listen and respond. Feel free to reach out to us using the contact information
+                below, and let's start a conversation. Your inquiries matter to us.Have a question,
+                need assistance, or just want to share your thoughts? We're here to listen and
+                respond. Feel free to reach out to us using the contact information below, and let's
+                start a conversation. Your inquiries matter to us.
+              </p>
+              <p className="mt-3">
+                We value your communication and strive to provide timely responses. Whether you're a
+                prospective client, partner, or simply curious, talking to us today is the first
+                step towards meaningful engagement.
               </p>
 
               <h4 className="mt-12 text-xl">Byuda Holdings</h4>

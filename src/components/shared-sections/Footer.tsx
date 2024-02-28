@@ -19,9 +19,9 @@ const Footer = () => {
             <div className="flex flex-col items-center max-w-sm text-white lg:items-start lg:gap-10">
               <Image src={byundaHoldingLogo} alt="Byunda holding white logo" className="h-14" />
               <p className="hidden lg:block">
-                Lorem ipsum dolor sit amet consectetur. Tincidunt metus sapien neque eu aliquet
-                cursus urna. Et pellentesque nam lectus imperdiet suspendisse augue nisi id. Est
-                quis neque vitae.
+                Byuda Holdings, is a dynamic and diversified holding company at the forefront of
+                driving innovation, growth, and sustainability across various sectors to contribute
+                significantly to the economic and social development of the local communities.
               </p>
               <span className="hidden lg:block">Byuda Holdings © All rights reserved. 2024</span>
             </div>

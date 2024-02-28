@@ -9,12 +9,11 @@ const Sectors = () => {
       <CenterContent>
         <PageBreadcrumb />
         <p className="max-w-5xl text-justify mt-9">
-          Lorem ipsum dolor sit amet consectetur. Fusce urna non est tortor tortor faucibus fusce
-          amet suspendisse. Duis vitae et a mauris odio. Mollis condimentum integer tincidunt etiam
-          faucibus enim porta sed faucibus. Pharetra ut tortor egestas convallis vitae dignissim
-          pellentesque. Tellus mauris nullam odio viverra vel lectus odio consectetur sit. Diam
-          scelerisque est odio donec in pharetra enim justo purus. Suscipit mauris leo nisl nibh
-          proin amet cum.
+          Our dedicated investment is strategically allocated to specific sectors, both within the
+          private and public markets in the region. We actively engage in equity-like investments,
+          channeling resources into sectors such as manufacturing, private enterprises at various,
+          and collaborative ventures alongside external partners. This sector-focused approach
+          allows us to navigate and capitalize on opportunities with precision and insight.
         </p>
       </CenterContent>
       <Services />
