@@ -42,23 +42,18 @@ const Services = () => {
   return (
     <div className="mt-10 sm:mt-20 md:mt-28 lg:mt-32">
       <CenterContent>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-8 sm:gap-y-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 h-full md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-8 sm:gap-y-10">
           {services.map((service, index) => (
-            <div key={index} className="rounded-2xl overflow-clip">
+            <div key={index} className="rounded-2xl overflow-clip h-full">
               <Image
                 src={service.coverImage}
                 alt="Hygiene service cover"
                 className="object-cover w-full h-52"
               />
-              <div className="bg-[#F3F3F3] w-full px-9 py-5 flex flex-col gap-5 rounded-b-3xl">
+              <div className="bg-[#F3F3F3] w-full px-9 py-5 h-full flex flex-col gap-5 rounded-b-3xl">
                 <span className="text-xl">{service.title}</span>
                 <p className="text-justify">{service.desciption}</p>
-                <Link
-                  href={`/sectors/${service.learnMorePath}`}
-                  className="flex items-center self-center text-dark-red gap-3"
-                >
-                  Learn more <FiArrowRightCircle className="text-3xl" />
-                </Link>
+              
               </div>
             </div>
           ))}

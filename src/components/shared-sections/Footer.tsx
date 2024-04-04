@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3">
           <div className="bg-[#7F0D1D] z-10 py-8 lg:py-14 w-full">
             <div className="flex flex-col items-center max-w-sm text-white lg:items-start lg:gap-10">
-              <Image src={byundaHoldingLogo} alt="Byunda holding white logo" className="h-14" />
+              <Image src={byundaHoldingLogo} alt="Byunda holding white logo" className="h-14 relative -left-[70px] sm:-left-[22px]" />
               <p className="hidden lg:block">
                 Byuda Holdings, is a dynamic and diversified holding company at the forefront of
                 driving innovation, growth, and sustainability across various sectors to contribute
@@ -56,16 +56,16 @@ const Footer = () => {
                 <h4 className="font-medium text-base text-[#FFF3F5]">Socials</h4>
                 <ul className="flex flex-wrap gap-6">
                   <li>
-                    <FaTwitter />
+                    <FaTwitter className="w-6 h-6" />
                   </li>
                   <li>
-                    <FaInstagramSquare />
+                    <FaInstagramSquare className="w-6 h-6" />
                   </li>
                   <li>
-                    <FaFacebookF />
+                    <FaFacebookF className="w-6 h-6" />
                   </li>
                   <li>
-                    <FaWhatsapp />
+                    <FaWhatsapp className="w-6 h-6" />
                   </li>
                 </ul>
               </div>
