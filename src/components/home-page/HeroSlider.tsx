@@ -60,11 +60,11 @@ const HeroSlider = () => {
               <Image
                 src={item.image}
                 alt="Landing hero section background image one"
-                className="w-full h-[60vh] object-left lg:h-[600px] object-cover lg:object-top pointer-events-none opacity-80"
+                className="w-full h-[80vh] object-left lg:h-[600px] object-cover lg:object-top pointer-events-none opacity-80"
               />
               <span className="absolute block w-full text-center text-white lg:text-[15px] bottom-10">
-                Byuda Holdings invests in sectors that are the building blocks of the African
-                Population
+                Byuda Holdings invests in sectors that are the building blocks
+                of the African Population
               </span>
             </div>
           </swiper-slide>

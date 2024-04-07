@@ -6,7 +6,7 @@ const AboutVideo = () => {
       <CenterContent>
         <h4 className="text-2xl font-medium text-dark-red">Our legacy</h4>
         <div className="flex flex-col-reverse items-center mt-6 lg:flex-row gap-10">
-          <iframe
+          {/* <iframe
             width="1200"
             height="200"
             src="https://www.youtube.com/embed/wOfm9WRFRxA"
@@ -14,7 +14,7 @@ const AboutVideo = () => {
             className="border-none w-full h-60 lg:h-[12.5rem]"
             allowFullScreen
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          ></iframe>
+          ></iframe> */}
           <div className="text-lg">
             <p>
               Byuda Holdings, is a dynamic and diversified holding company at the forefront of

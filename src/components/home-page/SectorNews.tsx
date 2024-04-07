@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FC, useRef } from "react";
 import CenterContent from "../layouts/CenterContent";
 import { SwiperContainer } from "swiper/element";
+import { useWindowSize } from "react-use";
 
 const sectorNews = [
   {
@@ -53,94 +54,109 @@ type Props = {
 
 const SectorNews: FC<Props> = ({ hideTitle, hiddenCardId }) => {
   const swiperElRef = useRef<SwiperContainer>(null);
+  const { width } = useWindowSize();
 
   return (
     <CenterContent>
-      <div className={`flex w-full ${hiddenCardId ? "justify-start" : "justify-center"}`}>
+      <div
+        className={`flex w-full ${
+          hiddenCardId ? "justify-start" : "justify-center"
+        }`}
+      >
         <div className="w-full">
           {!hideTitle && (
-            <h4 className="text-xl text-center lg:text-left">Portfoilio & Sector News</h4>
+            <h4 className="text-xl text-center lg:text-left">
+              Portfoilio & Sector News
+            </h4>
           )}
-           <swiper-container
-              class={`flex flex-wrap w-full mt-8 lg:flex-row lg:flex-nowrap ${
-                hiddenCardId ? "justify-start" : "justify-center items-center"
-              }`}
-              ref={swiperElRef}
-              slides-per-view="4"
-              loop="true"
-              speed="500"
-              space-between="20"
-              css-mode="true"
-            >
+          <swiper-container
+            class={`flex flex-wrap w-full mt-8 lg:flex-row lg:flex-nowrap ${
+              hiddenCardId ? "justify-start" : "justify-center items-center"
+            }`}
+            ref={swiperElRef}
+            slides-per-view={
+              width && width > 1024 ? "4" : width && width > 768 ? "2" : "1"
+            }
+            loop="true"
+            speed="500"
+            space-between="20"
+            css-mode="true"
+          >
             {sectorNews
               .filter((item) => item.id !== hiddenCardId)
               .map((item, index) => (
-              <swiper-slide key={index}>
-                <Link href={`/newsroom/${item.id}`} key={index} className="group !hover:shadow-md !group-hover:shadow-md">
-                  <div className="max-w-[346px] rounded-md overflow-clip h-full">
-                    <Image
-                      src={item.image}
-                      alt="Clean africa"
-                      className="object-cover w-full h-60"
-                    />
-                    <div className="px-6 pt-4 text-white group-hover:bg-white group-hover:text-black transition-all duration-300 min-h-[250px] bg-dark-red pb-11 leading-7">
-                      <h3 className="text-[22px] font-medium">{item.heading}</h3>
-                      <p className="mt-4 text-[14px] leading-[21px] line-clamp-6 ">{item.description}</p>
+                <swiper-slide key={index}>
+                  <Link
+                    href={`/newsroom/${item.id}`}
+                    key={index}
+                    className="group !hover:shadow-md !group-hover:shadow-md"
+                  >
+                    <div className="max-w-[346px] rounded-md overflow-clip h-full">
+                      <Image
+                        src={item.image}
+                        alt="Clean africa"
+                        className="object-cover w-full h-60"
+                      />
+                      <div className="px-6 pt-4 text-white group-hover:bg-white group-hover:text-black transition-all duration-300 min-h-[250px] bg-dark-red pb-11 leading-7">
+                        <h3 className="text-[22px] font-medium">
+                          {item.heading}
+                        </h3>
+                        <p className="mt-4 text-[14px] leading-[21px] line-clamp-6 ">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
                 </swiper-slide>
               ))}
-            </swiper-container>
-            <div className="flex items-center gap-2 w-full justify-end mt-4">
+          </swiper-container>
+          <div className="flex items-center gap-2 w-full justify-end mt-4">
             <div
-            onClick={() =>{
-              swiperElRef.current?.swiper?.slidePrev();
-
-            }}
+              onClick={() => {
+                swiperElRef.current?.swiper?.slidePrev();
+              }}
             >
               <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-arrow-left-circle"
-            >
-              <circle cx={12} cy={12} r={10} />
-              <polyline points="12 8 8 12 12 16" />
-              <line x1={16} y1={12} x2={8} y2={12} />
-            </svg>
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="feather feather-arrow-left-circle"
+              >
+                <circle cx={12} cy={12} r={10} />
+                <polyline points="12 8 8 12 12 16" />
+                <line x1={16} y1={12} x2={8} y2={12} />
+              </svg>
             </div>
             <div
-            onClick={() =>{
-              swiperElRef.current?.swiper?.slideNext();
-            }}
+              onClick={() => {
+                swiperElRef.current?.swiper?.slideNext();
+              }}
             >
               <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-arrow-left-circle rotate-180"
-            >
-              <circle cx={12} cy={12} r={10} />
-              <polyline points="12 8 8 12 12 16" />
-              <line x1={16} y1={12} x2={8} y2={12} />
-            </svg>
-              
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="feather feather-arrow-left-circle rotate-180"
+              >
+                <circle cx={12} cy={12} r={10} />
+                <polyline points="12 8 8 12 12 16" />
+                <line x1={16} y1={12} x2={8} y2={12} />
+              </svg>
             </div>
           </div>
-          </div>
+        </div>
       </div>
     </CenterContent>
   );
