@@ -7,8 +7,8 @@ const Hero = () => {
       <div className="absolute w-full bottom-12">
         <CenterContent>
           <div className="w-full text-white">
-            <h1 className="text-4xl text-center text-white md:text-left">Careers</h1>
-            <p className="hidden max-w-2xl mt-3 md:block">
+            <h1 className="text-4xl text-center text-white md:text-left font-poppins">Careers</h1>
+            <p className="hidden max-w-2xl mt-3 md:block font-inter text-sm">
               We give our people the opportunity and support to achieve more than they ever thought
               possible.
             </p>

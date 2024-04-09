@@ -65,17 +65,17 @@ const SectorNews: FC<Props> = ({ hideTitle, hiddenCardId }) => {
       >
         <div className="w-full">
           {!hideTitle && (
-            <h4 className="text-xl text-center lg:text-left">
+            <h4 className="text-[15px] md:text-xl text-center font-light lg:text-left">
               Portfoilio & Sector News
             </h4>
           )}
           <swiper-container
-            class={`flex flex-wrap w-full mt-8 lg:flex-row lg:flex-nowrap ${
+            class={`flex flex-wrap w-full mt-8 font-poppins lg:flex-row lg:flex-nowrap ${
               hiddenCardId ? "justify-start" : "justify-center items-center"
             }`}
             ref={swiperElRef}
             slides-per-view={
-              width && width > 1024 ? "4" : width && width > 768 ? "2" : "1"
+              width && width > 1024 ? "4" : width && width > 768 ? "2" : width && width > 400 ? '1.2' : "1"
             }
             loop="true"
             speed="500"
@@ -98,10 +98,10 @@ const SectorNews: FC<Props> = ({ hideTitle, hiddenCardId }) => {
                         className="object-cover w-full h-60"
                       />
                       <div className="px-6 pt-4 text-white group-hover:bg-white group-hover:text-black transition-all duration-300 min-h-[250px] bg-dark-red pb-11 leading-7">
-                        <h3 className="text-[22px] font-medium">
+                        <h3 className="text-[25px] font-medium-">
                           {item.heading}
                         </h3>
-                        <p className="mt-4 text-[14px] leading-[21px] line-clamp-6 ">
+                        <p className="mt-4 text-[13px] md:text-[14px] leading-[21px] line-clamp-6 ">
                           {item.description}
                         </p>
                       </div>

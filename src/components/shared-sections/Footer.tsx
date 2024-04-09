@@ -29,31 +29,31 @@ const Footer = () => {
           <div className="lg:col-span-2 bg-dark-red w-full z-10 text-[#FFF3F5] px-[5%] py-14 lg:pl-24">
             <div className="flex flex-wrap justify-between w-full  gap-y-10">
               <ul className="flex flex-col w-48 gap-3">
-                <li className="mb-1 font-medium">Quick links</li>
+                <li className="mb-1 font-medium text-[14px] md:text-[15px]">Quick links</li>
                 {quickLinks.map((link, index) => (
-                  <li key={index} className="capitalize">
+                  <li key={index} className="capitalize text-[14px] md:text-[15px]">
                     <Link href={link}> {link}</Link>
                   </li>
                 ))}
               </ul>
               <ul className="flex flex-col w-48 gap-3">
-                <li className="mb-1 font-medium">Sectors</li>
+                <li className="mb-1 font-medium text-[14px] md:text-[15px]">Sectors</li>
                 {sectors.map((sector, index) => (
-                  <li key={index} className="capitalize">
+                  <li key={index} className="capitalize text-[14px] md:text-[15px]">
                     <Link href={`sectors/${sector.split(" ").join("-")}`}> {sector}</Link>
                   </li>
                 ))}
               </ul>
               <ul className="flex flex-col w-48 gap-3">
-                <li className="mb-1 font-medium">Portfolio</li>
+                <li className="mb-1 font-medium text-[14px] md:text-[15px]">Portfolio</li>
                 {parteners.map((link, index) => (
-                  <li key={index} className="capitalize">
+                  <li key={index} className="capitalize text-[14px] md:text-[15px]">
                     <Link href="#"> {link}</Link>
                   </li>
                 ))}
               </ul>
               <div className="flex flex-col gap-4 w-48 text-[#FF656D] text-3xl">
-                <h4 className="font-medium text-base text-[#FFF3F5]">Socials</h4>
+                <h4 className="font-medium text-base text-[#FFF3F5] text-[14px] md:text-[15px]">Socials</h4>
                 <ul className="flex flex-wrap gap-6">
                   <li>
                     <FaTwitter className="w-6 h-6" />

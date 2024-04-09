@@ -1,3 +1,4 @@
+import { Poppins } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -11,6 +12,8 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-maven_pro)"],
         roboto: ["var(--font-roboto)"],
+        poppins: ["var(--font-poppins)"],
+        inter: ["var(--font-inter)"],
       },
       colors: {
         "dark-red": {
@@ -23,6 +26,9 @@ const config: Config = {
           "950": "#4c030b",
         },
       },
+      objectPosition: {
+        "left": "12% 1000%"
+      }
     },
   },
   plugins: [],

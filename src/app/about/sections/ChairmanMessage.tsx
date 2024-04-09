@@ -7,7 +7,7 @@ const ChairmanMessage = () => {
     <div className="py-8 bg-white lg:py-12">
       <CenterContent>
         <div>
-          <h4 className="text-xl text-dark-red">Message from our Chairman</h4>
+          <h4 className="text-xl max-md:text-dark-red">Message from our Chairman</h4>
           <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
             <div className="h-72">
               <Image
@@ -16,7 +16,7 @@ const ChairmanMessage = () => {
                 className="object-cover object-top w-full h-full"
               />
             </div>
-            <div>
+            <div className="max-md:text-[13px]">
               <p>
                 We believe in more than just business; we believe in creating a positive impact on
                 the world. From our first steps with FCC to the establishment of our diverse

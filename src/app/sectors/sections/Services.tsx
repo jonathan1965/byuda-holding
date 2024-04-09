@@ -51,8 +51,8 @@ const Services = () => {
                 className="object-cover w-full h-52"
               />
               <div className="bg-[#F3F3F3] w-full px-9 py-5 h-full flex flex-col gap-5 rounded-b-3xl">
-                <span className="text-xl">{service.title}</span>
-                <p className="text-justify">{service.desciption}</p>
+                <span className="text-xl text-center">{service.title}</span>
+                <p className=" text-sm text-center">{service.desciption}</p>
               
               </div>
             </div>

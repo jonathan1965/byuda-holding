@@ -6,18 +6,18 @@ const StatsSections = () => {
   return (
     <div>
       <div className="py-10 bg-dark-red-200 lg:py-32 text-dark-red">
-        <div className="flex flex-col justify-center lg:flex-row gap-16 lg:gap-44">
+        <div className="flex flex-col justify-center lg:flex-row gap-10 lg:gap-40">
           <div className="flex flex-col items-center justify-center">
             <Counter counter={9} />
-            <span className="font-medium">JOBS CREATED</span>
+            <span className="font-medium text-sm md:text-md">JOBS CREATED</span>
           </div>
           <div className="flex flex-col items-center justify-center">
             <Counter counter={100} />
-            <span className="font-medium">CLIENTS SERVED</span>
+            <span className="font-medium text-sm md:text-md">CLIENTS SERVED</span>
           </div>
           <div className="flex flex-col items-center justify-center">
             <Counter counter={30} />
-            <span className="font-medium">EMPLOYEES</span>
+            <span className="font-medium text-sm md:text-md">EMPLOYEES</span>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@ function Counter({ counter }: { counter: number }) {
   return (
     <motion.span
       transition={{ type: "spring", duration: 0.8 }}
-      className="block text-6xl font-roboto"
+      className="block text-[47px] md:text-[69px] font-roboto"
       ref={ref}
     >
       0

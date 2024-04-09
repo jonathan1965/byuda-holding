@@ -23,14 +23,14 @@ const Home = () => {
           <div className="grid sm:grid-cols-2">
             <Image src={legacyImage} alt="Nature background" className="w-full h-40 sm:h-full" />
             <div className="flex flex-col justify-center p-6 text-white bg-dark-red gap-2 sm:gap-4 lg:gap-6 lg:p-10">
-              <h3 className="text-lg sm:text-4xl">Legacy</h3>
-              <p>
+              <h3 className="text-lg sm:text-[34px] font-inter">Legacy</h3>
+              <p className="font-inter font-light text-[12px] md:text-[13px]">
                 Lorem ipsum dolor sit amet consectetur. Natoque viverra sit venenatis feugiat.
                 Praesent auctor nec nisl eros nibh turpis. Ut elementum tellus risus ante lobortis
                 viverra.
               </p>
               <div className="flex items-center group gap-4 hover:gap-8 cursor-pointer transition-all duration-300">
-                <span className="font-medium uppercase group-hover:opacity-60">Know more</span>
+                <span className="font-medium font-inter uppercase group-hover:opacity-60">Know more</span>
                 <svg
                   width={20}
                   height={20}

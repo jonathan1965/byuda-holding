@@ -17,7 +17,7 @@ const PartenerCard: FC<Props> = ({ image, description }) => {
       <div className="flex max-w-4xl gap-6">
         <div className="flex-shrink-0 hidden w-px h-full bg-black sm:block"></div>
         <div>
-          <p>{description}</p>
+          <p className="text-sm">{description}</p>
           <span className="flex items-center self-center mt-4 text-dark-red gap-10 lg:gap-3">
             Get to know more about the First Cleaning company
             <FiArrowRightCircle className="text-3xl" />

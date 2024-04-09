@@ -7,14 +7,18 @@ import Hero from "./sections/Hero";
 import Leadership from "./sections/Leadership";
 import Mission from "./sections/Mission";
 import OurRwandaCompanies from "./sections/OurRwandaCompanies";
+import Breadcrumb from "@/components/shared-sections/Breadcrumb";
 
 const About = () => {
   return (
     <div>
       <Hero />
-      <div className="mt-10">
+      <div className="mt-8 md:mt-10">
         <CenterContent>
-          <PageBreadcrumb />
+          <div className="max-w-[1080px] mx-auto">
+            <Breadcrumb hidden crumbs={[{ name: 'About us', url: "/about"}, { name: 'Our legacy', url: "/"}]} title="About us"  />
+          </div>
+          
         </CenterContent>
       </div>
 

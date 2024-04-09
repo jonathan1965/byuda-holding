@@ -29,8 +29,8 @@ const Leadership = () => {
   return (
     <div className="pt-12 pb-16 bg-white">
       <CenterContent>
-        <h4 className="text-2xl">LEADERSHIP</h4>
-        <hr className="bg-dark-red h-[2px]" />
+        <h4 className="text-2xl sm:text-start text-center sm:mb-0 mb-8">LEADERSHIP</h4>
+        <hr className="bg-dark-red h-[2px] sm:block hidden" />
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
           {teamMembers.map((member, index) => (
             <div key={index}>

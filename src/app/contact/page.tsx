@@ -11,9 +11,9 @@ function page() {
       <CenterContent>
         <PageBreadcrumb />
         <div className="my-10 md:my-14">
-          <h2 className="text-2xl text-dark-red">Talk to us today.</h2>
+          <h2 className="text-2xl text-dark-red font-poppins">Talk to us today.</h2>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
-            <div className="w-full">
+            <div className="w-full font-poppins text-sm">
               <p className="text-justify">
                 Have a question, need assistance, or just want to share your thoughts? We're here to
                 listen and respond. Feel free to reach out to us using the contact information

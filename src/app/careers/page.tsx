@@ -10,7 +10,7 @@ const pages = () => {
       <Hero />
       <CenterContent>
         <div className="mt-7"></div>
-        <h2 className="text-2xl font-medium">Vacancies.</h2>
+        <h2 className="text-2xl font-medium font-inter">Vacancies.</h2>
         <div className="flex flex-col mt-8 sm:flex-row gap-16">
           {/* <div className="flex flex-col gap-2 w-44">
             <span>Logistics Officer</span>
@@ -28,7 +28,7 @@ const pages = () => {
               Apply now
             </button>
           </div> */}
-          <h4>NO VACANCIES AVAILABLE . PLEASE BE ON A LOOK OUT SOON</h4>
+          <h4 className="md:mt-20 md:mb-20">NO VACANCIES AVAILABLE . PLEASE BE ON A LOOK OUT SOON</h4>
         </div>
 
         <div className="mt-10 mb-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-clip">
@@ -37,7 +37,7 @@ const pages = () => {
             alt="People invest"
             className="object-cover w-full h-52 md:h-60"
           />
-          <div className="bg-[#A5A5A5] flex flex-col justify-center text-white px-5 py-5 md:py-0">
+          <div className="bg-[#A5A5A5] font-inter flex flex-col justify-center text-white px-5 py-5 md:py-0">
             <h5 className="text-2xl">Investing in our people</h5>
             <p className="max-w-lg mt-4">
               Investing in our people We emphasize continuous development and skill building to

@@ -8,7 +8,7 @@ const Sectors = () => {
     <div className="mt-8 lg:mt-20">
       <CenterContent>
         <PageBreadcrumb />
-        <p className="max-w-5xl text-justify mt-9">
+        <p className="max-w-5xl text-justify mt-9 text-sm">
           Our dedicated investment is strategically allocated to specific sectors, both within the
           private and public markets in the region. We actively engage in equity-like investments,
           channeling resources into sectors such as manufacturing, private enterprises at various,

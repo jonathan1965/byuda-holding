@@ -18,7 +18,7 @@ const Hero = () => {
       <Image
         src={heroBg}
         alt="About page hero background"
-        className="w-full object-cover object-top h-[36vh] lg:h-[540px]"
+        className="w-full object-cover object-top h-[36vh] lg:h-[430px]"
       />
     </section>
   );

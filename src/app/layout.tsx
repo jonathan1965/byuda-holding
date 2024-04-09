@@ -1,7 +1,7 @@
 import Footer from "@/components/shared-sections/Footer";
 import Navbar from "@/components/shared-sections/Navbar";
 import type { Metadata } from "next";
-import { Maven_Pro, Poppins, Roboto } from "next/font/google";
+import { Inter, Maven_Pro, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"], variable: "--font-maven_pro" });
@@ -20,6 +20,13 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-inter",
+});
+
 export const metadata: Metadata = {
   title: "Byuda Holding | Nurturing and steering businesses across diverse sector",
   description:
@@ -33,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${mavenPro.variable} ${roboto.variable} font-sans`}>
+      <body className={`${poppins.variable} ${mavenPro.variable} ${roboto.variable} ${inter.variable} font-sans`}>
         <main className="flex flex-col min-h-screen">
           <Navbar />
           <div className="flex-1 h-full">{children}</div>

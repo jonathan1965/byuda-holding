@@ -4,9 +4,9 @@ const VideoSection = () => {
   return (
     <div className="bg-dark-red-200 py-9 lg:py-16">
       <CenterContent>
-        <div className="grid lg:grid-cols-2 gap-5 lg:gap-20">
+        <div className="grid lg:grid-cols-2 gap-5 lg:gap-20 items-stretch">
           <div
-            className="order-2 lg:text-[15px] lg:order-1 leading-[24.69px]"
+            className="order-2 text-[13px] md:text-[15px] lg:order-1 leading-[164.6%] pb-5 h-min"
             style={{
               textAlign: "justify",
               textJustify: "inter-word",
@@ -27,15 +27,20 @@ const VideoSection = () => {
               vision, and a commitment to excellence.
             </p>
           </div>
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/oeOdHMPhZaQ"
-            title="ISMAEL LO - AFRICA"
-            className="border-none lg:order-2"
-            allowFullScreen
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          ></iframe>
+          <div className="lg:order-2 h-full bg-red-500 overflow-hidden relative">
+            <video
+              muted
+              autoPlay
+              width={'100%'}
+              loop
+              preload="none"
+              className="border-none min-h-full h-full w-full max-h-[300px]  block object-cover lg:absolute"
+
+            >
+              <source src="/vid/Byudashortvid.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </CenterContent>
     </div>
