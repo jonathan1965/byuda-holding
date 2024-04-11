@@ -27,15 +27,14 @@ const VideoSection = () => {
               vision, and a commitment to excellence.
             </p>
           </div>
-          <div className="lg:order-2 h-full bg-red-500 overflow-hidden relative">
+          <div className="lg:order-2 h-full bg-[#464647] overflow-hidden relative">
             <video
               muted
               autoPlay
-              width={'100%'}
+              width={"100%"}
               loop
               preload="none"
               className="border-none min-h-full h-full w-full max-h-[300px]  block object-cover lg:absolute"
-
             >
               <source src="/vid/Byudashortvid.mp4" type="video/mp4" />
               Your browser does not support the video tag.

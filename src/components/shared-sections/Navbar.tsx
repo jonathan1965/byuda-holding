@@ -33,11 +33,10 @@ const mobLinks = [
     name: "Sectors",
     url: "/sectors",
     items: [
-      { name: "Hygiene", url: "/about#hygiene" },
-      { name: "Agriculture", url: "/about#agriculture" },
-      { name: "Manufacturing", url: "/about#manufacturing" },
-      { name: "Logistics", url: "/about#logistic" },
-      { name: "Labour outsource", url: "/about#labour" },
+      { name: "Hygiene", url: "/sectors/hygiene" },
+      { name: "Agriculture", url: "/sectors/agriculture" },
+      { name: "Manufacturing", url: "/sectors/manufacturing" },
+      { name: "Labour outsource", url: "/sectors/labour" },
     ],
   },
   {
@@ -83,6 +82,7 @@ const mobLinks = [
 const Navbar = () => {
   const pathnameChunks = usePathname().split("/").filter(Boolean);
   const basePath = pathnameChunks[0];
+  console.log(basePath, '------')
   const router = useRouter()
 
   const [isSeacrhcing, setIsSearching] = useState(false);
@@ -110,12 +110,12 @@ const Navbar = () => {
               {navLinks.map((link, index) => (
                 <Link
                   key={index}
-                  href={`/${link}`}
+                  href={`/${(basePath === "about" && link === "about") ? "" : link}`}
                   className={`capitalize ${
                     basePath === link ? "text-dark-red" : ""
                   } group/item  h-full py-5 lg:py-10`}
                 >
-                  {link}
+                  {(basePath === "about" && link === "about") ? "home" : link}
                   {link !== "about" && (
                     <div className="fixed w-full flex items-end justify-end top-[90px] group-hover/item:visible invisible py-10 bg-[#911320]/90 left-0">
                       <div className="grid grid-cols-5 gap-20">
@@ -125,29 +125,24 @@ const Navbar = () => {
                           </h1>
                           <div className="bg-[#FF656D] w-full h-[1px]" />
                           <Link
-                            href={"/sectors"}
+                            href={"/sectors/hygiene"}
                             className="text-[#FF656D] text-[14px]"
                           >
                             Hygiene Services
                           </Link>
                           <Link
-                            href={"/sectors"}
+                            href={"/sectors/agribusiness"}
                             className="text-[#FF656D] text-[14px]"
                           >
                             Agribusiness
                           </Link>
                           <Link
-                            href={"/sectors"}
+                            href={"/sectors/manufacturing"}
                             className="text-[#FF656D] text-[14px]"
                           >
                             Manufacturing
                           </Link>
-                          <Link
-                            href={"/sectors"}
-                            className="text-[#FF656D] text-[14px]"
-                          >
-                            Logistics
-                          </Link>
+                         
                         </div>
                         <div className="flex flex-col gap-4">
                           <h1 className="font-light text-[15px] text-white">
@@ -155,29 +150,24 @@ const Navbar = () => {
                           </h1>
                           <div className="bg-[#FF656D] w-full h-[1px]" />
                           <Link
-                            href={"/sectors"}
+                            href={"/sectors/agribusiness"}
                             className="text-[#FF656D] text-[14px]"
                           >
                             Keza farmers pride
                           </Link>
                           <Link
-                            href={"/sectors"}
+                            href={"/sectors/labour"}
                             className="text-[#FF656D] text-[14px]"
                           >
                             DSS
                           </Link>
                           <Link
-                            href={"/sectors"}
+                            href={"/sectors/hygiene"}
                             className="text-[#FF656D] text-[14px]"
                           >
                             Ishyami Factory
                           </Link>
-                          <Link
-                            href={"/sectors"}
-                            className="text-[#FF656D] text-[14px]"
-                          >
-                            AMTOLL
-                          </Link>
+        
                         </div>
                         <div className="flex flex-col gap-4">
                           <h1 className="font-light text-[15px] text-white">
@@ -243,7 +233,7 @@ const Navbar = () => {
             </div>
           </div>
           <Popover className="relative -mb-2 lg:hidden">
-            {({ open }) => (
+            {({ open, close }) => (
               <>
                 <Popover.Button className="py-4">
                   {open ? (
@@ -280,6 +270,7 @@ const Navbar = () => {
                   <div className="grid mt-8 gap-5">
                     {mobLinks.map((navLink) => (
                       <OpenLink
+                      close={close}
                         key={navLink.name}
                         name={navLink.name}
                         url={navLink.name}
@@ -308,9 +299,11 @@ function OpenLink({
   name,
   url,
   items,
+  close
 }: {
   name: string;
   url: string;
+  close:any;
   items: { name: string; url: string }[];
 }) {
   const [open, setOpen] = useState(false);
@@ -332,7 +325,7 @@ function OpenLink({
       {open && (
         <div className="flex flex-col text-white mt-4 gap-4">
           {items.map((item, index) => (
-            <Link key={index} href={item.url} className={`capitalize`}>
+            <Link key={index} href={item.url} className={`capitalize`} onClick={() => close()}>
               {item.name}
             </Link>
           ))}

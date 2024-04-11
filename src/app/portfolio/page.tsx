@@ -13,22 +13,25 @@ const bwLogos = [
     logo: fccLogoBw,
     description:
       "First Cleaning Company ltd (FCC) is the leading provider of meticulous cleaning services in Rwanda. Specializing in residential, commercial, and specialized cleaning, our team is dedicated to delivering excellence in cleanliness. Impeccable standards are maintained through the use of industry-leading practices and environmentally conscious products. Spaces are transformed into pristine environments, prioritizing health and hygiene.",
+    link:"/sectors/hygiene"
   },
-  {
-    logo: shamiLogoBw,
-    description:
-      "Located in a strategic industrial zone, Ishami Factory is equipped with cutting-edge technology and adheres to the highest industry standards for quality, safety and Environment. The facility encompasses various stages of tobacco processing, from cultivation to packaging, ensuring efficiency and precision throughout the production chain. The factory also deals in Raw material Exports globally.",
-  },
+  // {
+  //   logo: shamiLogoBw,
+  //   description:
+  //     "Located in a strategic industrial zone, Ishami Factory is equipped with cutting-edge technology and adheres to the highest industry standards for quality, safety and Environment. The facility encompasses various stages of tobacco processing, from cultivation to packaging, ensuring efficiency and precision throughout the production chain. The factory also deals in Raw material Exports globally.",
+  // },
   {
     logo: kezaLogoBw,
     description:
       "Keza Farmers Pride ldt, is a trailblazing force in the agricultural sector that has been a beacon of change since its establishment with a focus on seamless supply chain management of agro-produce, The company has carved a niche for itself by championing a business model that not only prioritizes profitability but, more importantly, places a strong emphasis on the welfare and empowerment of farmers.",
+    link:"/sectors/agribusiness"
   },
   {
     logo: dssLogoBw,
     description:
       "Dynamic services solution (DSS) is a leading provider of outsourced labor services, dedicated to helping businesses streamline their operations and enhance productivity. Established in 2013, the company has grown into a trusted partner for organizations seeking cost-effective and efficient solutions to their staffing needs.",
-  },
+    link:"/sectors/labour"
+    },
 ];
 
 const page = () => {
@@ -45,7 +48,7 @@ const page = () => {
         </p>
         <div className="flex flex-col my-20 lg:my-32 gap-14">
           {bwLogos.map((card, index) => (
-            <PartenerCard image={card.logo} description={card.description} key={index} />
+            <PartenerCard image={card.logo} link={card.link} description={card.description} key={index} />
           ))}
         </div>
       </CenterContent>

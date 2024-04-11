@@ -6,8 +6,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC, useRef } from "react";
 import CenterContent from "../layouts/CenterContent";
-import { SwiperContainer } from "swiper/element";
+import { SwiperContainer, register } from "swiper/element";
 import { useWindowSize } from "react-use";
+
+register();
 
 const sectorNews = [
   {

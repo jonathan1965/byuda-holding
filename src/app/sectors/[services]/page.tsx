@@ -2,7 +2,7 @@
 import dssLogo from "@/assets/icons/dss-logo.svg";
 import fccLogo from "@/assets/icons/fcc-logo.svg";
 import ishamiLogo from "@/assets/icons/ishami-logo.svg";
-import kezaLogo from "@/assets/icons/keza-logo.svg";
+import kezaLogo from "@/assets/icons/loggo.svg";
 import doctor from "@/assets/images/doctor-image.png";
 import farmerTractor from "@/assets/images/farmer-tractor-cover.png";
 import farmer from "@/assets/images/farmer.png";
@@ -11,6 +11,7 @@ import ishamiCover from "@/assets/images/ishami-cover.png";
 import waiterCover from "@/assets/images/waiter-cover.png";
 import waiter from "@/assets/images/waiter.png";
 import SectorNews from "@/components/home-page/SectorNews";
+
 import CenterContent from "@/components/layouts/CenterContent";
 import ContactCTA from "@/components/shared-sections/Contact-CTA";
 import PageBreadcrumb from "@/components/shared-sections/PageBreadcrumb";
@@ -122,7 +123,7 @@ const Page = () => {
               <Image
                 src={activeData.logoImage}
                 alt="service sector"
-                className="flex-shrink-0 w-40 gap-40 md:w-52"
+                className="flex-shrink-0 w-40 gap-40 md:w-52 object-contain"
               />
               <div className="flex flex-col max-w-2xl gap-5">
                 <p className="text-justify">{activeData.companyDescription}</p>
@@ -164,10 +165,10 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="mt-10 mb-14 md:mb-32">
-            <SectorNews />
-          </div>
         </CenterContent>
+        <div className="mt-10 mb-24">
+        <SectorNews />
+      </div>
         <ContactCTA />
       </div>
     </div>

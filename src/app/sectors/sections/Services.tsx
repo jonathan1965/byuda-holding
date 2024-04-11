@@ -53,7 +53,12 @@ const Services = () => {
               <div className="bg-[#F3F3F3] w-full px-9 py-5 h-full flex flex-col gap-5 rounded-b-3xl">
                 <span className="text-xl text-center">{service.title}</span>
                 <p className=" text-sm text-center">{service.desciption}</p>
-              
+                <a
+                  href={`/sectors/${service.learnMorePath}`}
+                  className="text-[#911320] text-center"
+                >
+                  Learn more
+                </a>
               </div>
             </div>
           ))}
