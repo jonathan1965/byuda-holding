@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiArrowRightCircle } from "react-icons/fi";
 
+
 const services = [
   {
     title: "Hygiene Services",
@@ -57,8 +58,8 @@ const Services = () => {
                   href={`/sectors/${service.learnMorePath}`}
                   className="text-[#911320] text-center"
                 >
-                  Learn more
-                </a>
+                  <FiArrowRightCircle className="text-3xl" />
+                  </a>
               </div>
             </div>
           ))}

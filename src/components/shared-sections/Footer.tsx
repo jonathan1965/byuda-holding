@@ -20,7 +20,6 @@ const sectors = [
   "hygiene Services",
   "agribusiness",
   "manufacturing",
-  "logistics",
 ];
 const parteners = [
   "FCC",
