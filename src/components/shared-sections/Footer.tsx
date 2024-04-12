@@ -56,7 +56,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="lg:col-span-2 bg-dark-red w-full z-10 text-[#FFF3F5] px-[5%] py-14 lg:pl-24">
-            <div className=" grid grid-cols-2 sm:gap-0 place-content-end sm:items-start sm:flex flex-wrap justify-between w-full gap-y-10">
+            <div className="grid grid-cols-2 sm:gap-0 place-content-end sm:items-start sm:flex flex-wrap justify-between w-full gap-10">
               <ul className="flex flex-col w-48 gap-3">
                 <li className="mb-1 font-medium text-[14px] md:text-[15px]">
                   Quick links
@@ -99,7 +99,7 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-              <div className="flex flex-col gap-4 w-48 text-[#FF656D] text-3xl">
+              <div className="flex flex-col gap-4 w-48 text-[#FF656D] text-3xl xl:mt-0 mt-10">
                 <h4 className="font-medium text-base text-[#FFF3F5] text-[14px] md:text-[15px]">
                   Socials
                 </h4>
