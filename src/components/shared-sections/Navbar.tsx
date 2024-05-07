@@ -67,14 +67,14 @@ const mobLinks = [
   },
 
   {
-    name: "News",
-    url: "/news",
+    name: "Newsroom",
+    url: "/newsroom",
     items: [],
   },
 
   {
     name: "Contacts",
-    url: "/contacts",
+    url: "/contact",
     items: [],
   },
 ];
