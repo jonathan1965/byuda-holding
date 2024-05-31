@@ -12,7 +12,7 @@ const PartenerCard: FC<Props> = ({ image, description, link }) => {
   return (
     <div className="flex flex-col sm:flex-row gap-5 sm:gap-10 md:gap-14 lg:gap-20">
       <div className="flex items-center justify-center flex-shrink-0 w-40">
-        <Image src={image} alt="logo" className="w-full contrast-0 grayscale-[100%] brightness-200 hover:contrast-100 hover:grayscale-0 hover:brightness-100 transition-all duration-300 ease-in-out  " />
+        <Image src={image} alt="logo" className="w-full transition-all duration-300 ease-in-out  " />
       </div>
 
       <div className="flex max-w-4xl gap-6">
