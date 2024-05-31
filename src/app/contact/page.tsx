@@ -49,9 +49,9 @@ function page() {
               </div>
               <div className="flex mt-6 gap-5 ">
                 <FaPhone className="flex-shrink-0 block ml-px text-2xl text-dark-red" />
-                <span>
-                  Tel: +250 7880 000X <br /> Tel: +250 7880 000X <br /> Tel: +250 7880 000X
-                </span>
+                <a href="tel:+250785129699">
+                  Tel: +250 785 129 699
+                </a>
               </div>
             </div>
             <div className="flex flex-col">

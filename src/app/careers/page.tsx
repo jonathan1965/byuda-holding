@@ -3,6 +3,7 @@ import CenterContent from "@/components/layouts/CenterContent";
 import Image from "next/image";
 import { FiArrowRightCircle } from "react-icons/fi";
 import Hero from "./sections/Hero";
+import Link from 'next/link'
 
 const pages = () => {
   return (
@@ -43,10 +44,10 @@ const pages = () => {
               Investing in our people We emphasize continuous development and skill building to
               drive performance.
             </p>
-            <span className="flex items-center mt-4 text-dark-red gap-3">
+            <Link href={"/about"} className="flex items-center mt-4 text-dark-red gap-3">
               <FiArrowRightCircle className="text-4xl" />
               Learn more about our legacy
-            </span>
+            </Link>
           </div>
         </div>
       </CenterContent>

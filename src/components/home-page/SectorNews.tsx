@@ -8,6 +8,7 @@ import { FC, useRef } from "react";
 import CenterContent from "../layouts/CenterContent";
 import { SwiperContainer, register } from "swiper/element";
 import { useWindowSize } from "react-use";
+import { usePathname } from "next/navigation";
 
 register();
 
@@ -43,6 +44,7 @@ type Props = {
 const SectorNews: FC<Props> = ({ hideTitle, hiddenCardId }) => {
   const swiperElRef = useRef<SwiperContainer>(null);
   const { width } = useWindowSize();
+  const url = usePathname();
 
   return (
     <CenterContent>
@@ -54,7 +56,7 @@ const SectorNews: FC<Props> = ({ hideTitle, hiddenCardId }) => {
         <div className="w-full">
           {!hideTitle && (
             <h4 className="text-[15px] md:text-xl text-center font-light lg:text-left">
-              Portfoilio & Sector News
+              {url.includes("sectors") ? "Explore more" : "Portfoilio & Sector News"}
             </h4>
           )}
           <swiper-container
