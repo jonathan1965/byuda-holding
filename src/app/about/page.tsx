@@ -26,7 +26,7 @@ const About = () => {
       <OurRwandaCompanies />
       <ChairmanMessage />
       <Mission />
-      <Leadership />
+      {/* <Leadership /> */}
       <ContactCTA />
     </div>
   );

@@ -9,6 +9,9 @@ const ChairmanMessage = () => {
         <div>
           <h4 className="text-xl max-md:text-dark-red">Message from our Chairman</h4>
           <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
+            <div className="relative w-full h-full">
+              <img src={"/chairman.png"} alt="Chairman" className="absolute object-cover top-0 right-0 w-full h-full" />
+            </div>
             <div className="max-md:text-[13px]">
               <p>
                 We believe in more than just business; we believe in creating a positive impact on
