@@ -8,15 +8,15 @@ const StatsSections = () => {
       <div className="py-10 bg-dark-red-200 lg:py-32 text-dark-red">
         <div className="flex flex-col justify-center lg:flex-row gap-10 lg:gap-40">
           <div className="flex flex-col items-center justify-center">
-            <Counter counter={9} />
+            <Counter counter={2312} noPlus />
             <span className="font-medium text-sm md:text-md">JOBS CREATED</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <Counter counter={100} />
+            <Counter counter={50} />
             <span className="font-medium text-sm md:text-md">CLIENTS SERVED</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <Counter counter={30} />
+            <Counter counter={50} />
             <span className="font-medium text-sm md:text-md">EMPLOYEES</span>
           </div>
         </div>
@@ -26,7 +26,7 @@ const StatsSections = () => {
 };
 export default StatsSections;
 
-function Counter({ counter }: { counter: number }) {
+function Counter({ counter, noPlus = false }: { counter: number, noPlus?:boolean }) {
   const ref = useRef<HTMLSpanElement>(null);
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, {
@@ -46,7 +46,7 @@ function Counter({ counter }: { counter: number }) {
     () =>
       springValue.on("change", (latest) => {
         if (ref.current) {
-          ref.current.textContent = `${Intl.NumberFormat("en-US").format(latest.toFixed(0))}+`;
+          ref.current.textContent = `${Intl.NumberFormat("en-US").format(latest.toFixed(0))}${!noPlus?"+":""}`;
         }
       }),
     [springValue]

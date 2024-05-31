@@ -1,5 +1,5 @@
 "use client";
-import amtollLogo from "@/assets/icons/amtoll-logo.svg";
+import amtollLogo from "@/assets/images/AMTOLLOLD-1.png";
 import dssLogo from "@/assets/images/dss.png";
 import fccLogo from "@/assets/images/fcc.png";
 import ishamiLogo from "@/assets/images/ishami.png";
@@ -7,7 +7,7 @@ import kezaLogo from "@/assets/images/kaze.png";
 import Image from "next/image";
 import CenterContent from "../layouts/CenterContent";
 
-const logos = [fccLogo, ishamiLogo, kezaLogo, dssLogo];
+const logos = [fccLogo, ishamiLogo, kezaLogo, dssLogo,amtollLogo];
 
 const PartenersLogosSliders = () => {
   return (

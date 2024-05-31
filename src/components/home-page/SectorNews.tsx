@@ -32,21 +32,7 @@ const sectorNews = [
     heading: "Empowering farmers",
     description:
       "Environmental consciousness is taking center stage, cleaning companies in Africa are redefining their role beyond traditional sanitation services. They're becoming key players in fostering a cleaner continent, not only for the benefit of the",
-  },
-  {
-    id: "4",
-    image: maizeField,
-    heading: "Empowering farmers",
-    description:
-      "Environmental consciousness is taking center stage, cleaning companies in Africa are redefining their role beyond traditional sanitation services. They're becoming key players in fostering a cleaner continent, not only for the benefit of the",
-  },
-  {
-    id: "5",
-    image: maizeField,
-    heading: "Empowering farmers",
-    description:
-      "Environmental consciousness is taking center stage, cleaning companies in Africa are redefining their role beyond traditional sanitation services. They're becoming key players in fostering a cleaner continent, not only for the benefit of the",
-  },
+  }
 ];
 
 type Props = {
@@ -77,11 +63,11 @@ const SectorNews: FC<Props> = ({ hideTitle, hiddenCardId }) => {
             }`}
             ref={swiperElRef}
             slides-per-view={
-              width && width > 1024 ? "4" : width && width > 768 ? "2" : width && width > 400 ? '1.2' : "1"
+              width && width > 1024 ? "3" : width && width > 768 ? "2" : width && width > 400 ? '1.2' : "1"
             }
             loop="true"
             speed="500"
-            space-between="20"
+            space-between="30"
             css-mode="true"
           >
             {sectorNews
@@ -93,7 +79,7 @@ const SectorNews: FC<Props> = ({ hideTitle, hiddenCardId }) => {
                     key={index}
                     className="group !hover:shadow-md !group-hover:shadow-md"
                   >
-                    <div className="max-w-[346px] rounded-md overflow-clip h-full">
+                    <div className="max-w-[420px] rounded-md overflow-clip h-full">
                       <Image
                         src={item.image}
                         alt="Clean africa"

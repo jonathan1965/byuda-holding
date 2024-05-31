@@ -3,6 +3,8 @@ import Navbar from "@/components/shared-sections/Navbar";
 import type { Metadata } from "next";
 import { Inter, Maven_Pro, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"], variable: "--font-maven_pro" });
 
@@ -41,11 +43,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${mavenPro.variable} ${roboto.variable} ${inter.variable} font-sans`}>
-        <main className="flex flex-col min-h-screen">
-          <Navbar />
-          <div className="flex-1 h-full">{children}</div>
-          <Footer />
-        </main>
+          <Loading>
+            <main className="flex flex-col min-h-screen">
+              <Navbar />
+              <div className="flex-1 h-full">{children}</div>
+              <Footer />
+            </main>
+          </Loading>
+
       </body>
     </html>
   );

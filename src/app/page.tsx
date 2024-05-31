@@ -7,6 +7,7 @@ import VideoSection from "@/components/home-page/VideoSection";
 import CenterContent from "@/components/layouts/CenterContent";
 import ContactCTA from "@/components/shared-sections/Contact-CTA";
 import Image from "next/image";
+import Link from 'next/link'
 
 const Home = () => {
   return (
@@ -30,11 +31,9 @@ const Home = () => {
               <div className="flex flex-col  gap-2 sm:gap-4 lg:gap-6">
                 <h3 className="text-lg sm:text-[34px] font-inter">Legacy</h3>
                 <p className="font-inter font-light text-[12px] md:text-[13px] mt-5">
-                  Lorem ipsum dolor sit amet consectetur. Natoque viverra sit
-                  venenatis feugiat. Praesent auctor nec nisl eros nibh turpis.
-                  Ut elementum tellus risus ante lobortis viverra.
+                We envision a future where excellence, integrity, and social responsibility converge to foster a sustainable and properous Africa.
                 </p>
-                <div className="flex items-center group gap-4 hover:gap-8 cursor-pointer transition-all duration-300">
+                <Link href="/about" className="flex items-center group gap-4 hover:gap-8 cursor-pointer transition-all duration-300">
                   <span className="font-medium font-inter uppercase group-hover:opacity-60">
                     Know more
                   </span>
@@ -54,7 +53,7 @@ const Home = () => {
                       fill="white"
                     />
                   </svg>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
