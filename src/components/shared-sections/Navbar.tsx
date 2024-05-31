@@ -10,6 +10,7 @@ import { useState } from "react";
 import downarrow from "@/assets/icons/downarrow.svg";
 import pattern from "@/assets/icons/pattern.svg";
 import { useRouter } from "next/navigation";
+import classNames from "classnames";
 
 const navLinks = [
   "about",
@@ -84,16 +85,18 @@ const mobLinks = [
 const Navbar = () => {
   const pathnameChunks = usePathname().split("/").filter(Boolean);
   const basePath = pathnameChunks[0];
-  console.log(basePath, '------')
   const router = useRouter()
 
   const [isSeacrhcing, setIsSearching] = useState(false);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("submitted");
     router.push(`/search?key=${e.target.search.value}`)
   }
+
+  const isSectors = basePath === "sectors";
+  const isPortfolio = basePath === "portfolio";
+  const isNewsroom = basePath === "newsroom";
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-xl">
@@ -115,13 +118,13 @@ const Navbar = () => {
                   href={`/${
                     basePath === 'about' && link === 'about' ? '' : link
                   }`}
-                  className={`capitalize ${
+                  className={`capitalize hover:text-dark-red ${
                     basePath === link ? 'text-dark-red' : ''
                   } group/item  h-full py-5 lg:py-10`}
                 >
                   {basePath === 'about' && link === 'about' ? 'home' : link}
                   {link !== 'about' && (
-                    <div className="fixed w-full flex items-end justify-end top-[90px] group-hover/item:visible invisible py-10 bg-[#911320]/90 left-0">
+                    <div className="fixed w-full flex items-end justify-end top-[90px] duration-300 group-hover/item:visible invisible py-10 bg-[#911320]/90 left-0">
                       <div className="grid grid-cols-5 gap-20">
                         <div className="flex flex-col gap-4">
                           <h1 className="font-light text-[15px] text-white">
@@ -130,43 +133,67 @@ const Navbar = () => {
                           <div className="bg-[#FF656D] w-full h-[1px]" />
                           <Link
                             href={'/sectors/hygiene'}
-                            className="text-[#FF656D] text-[14px]"
+                            className={classNames({
+                              " hover:text-white hover:font-semibold duration-300- transition-all-  text-[14px]":true,
+                              "text-white": isSectors,
+                              "text-[#FF656D]":!isSectors
+                            })}
                           >
                             Hygiene Services
                           </Link>
                           <Link
                             href={'/sectors/agribusiness'}
-                            className="text-[#FF656D] text-[14px]"
+                            className={classNames({
+                              "hover:text-white hover:font-semibold duration-300- transition-all-  text-[14px]":true,
+                              "text-white": isSectors,
+                              "text-[#FF656D]":!isSectors
+                            })}
                           >
                             Agribusiness
                           </Link>
                           <Link
                             href={'/sectors/manufacturing'}
-                            className="text-[#FF656D] text-[14px]"
+                            className={classNames({
+                              "hover:text-white hover:font-semibold duration-300- transition-all-  text-[14px]":true,
+                              "text-white": isSectors,
+                              "text-[#FF656D]":!isSectors
+                            })}
                           >
                             Manufacturing
                           </Link>
                         </div>
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4 w-[135px]">
                           <h1 className="font-light text-[15px] text-white">
                             Portfolio
                           </h1>
                           <div className="bg-[#FF656D] w-full h-[1px]" />
                           <Link
                             href={'/sectors/agribusiness'}
-                            className="text-[#FF656D] text-[14px]"
+                              className={classNames({
+                              " hover:text-white hover:font-semibold duration-300- transition-all-  text-[14px]":true,
+                              "text-white": isPortfolio,
+                              "text-[#FF656D]":!isPortfolio
+                            })}
                           >
                             Keza farmers pride
                           </Link>
                           <Link
                             href={'/sectors/labour'}
-                            className="text-[#FF656D] text-[14px]"
+                              className={classNames({
+                              " hover:text-white hover:font-semibold duration-300- transition-all-  text-[14px]":true,
+                              "text-white": isPortfolio,
+                              "text-[#FF656D]":!isPortfolio
+                            })}
                           >
                             DSS
                           </Link>
                           <Link
                             href={'/sectors/hygiene'}
-                            className="text-[#FF656D] text-[14px]"
+                              className={classNames({
+                              " hover:text-white hover:font-semibold duration-300- transition-all-  text-[14px]":true,
+                              "text-white": isPortfolio,
+                              "text-[#FF656D]":!isPortfolio
+                            })}
                           >
                             Ishyami Factory
                           </Link>
@@ -178,13 +205,21 @@ const Navbar = () => {
                           <div className="bg-[#FF656D] w-full h-[1px]" />
                           <Link
                             href={'/newsroom'}
-                            className="text-[#FF656D] text-[14px]"
+                            className={classNames({
+                              " hover:text-white hover:font-semibold duration-300- transition-all-  text-[14px]":true,
+                              "text-white": isNewsroom,
+                              "text-[#FF656D]":!isNewsroom
+                            })}
                           >
                             News
                           </Link>
                           <Link
                             href={'/newsroom'}
-                            className="text-[#FF656D] text-[14px]"
+                            className={classNames({
+                              " hover:text-white hover:font-semibold duration-300- transition-all-  text-[14px]":true,
+                              "text-white": isNewsroom,
+                              "text-[#FF656D]":!isNewsroom
+                            })}
                           >
                             Tenders
                           </Link>

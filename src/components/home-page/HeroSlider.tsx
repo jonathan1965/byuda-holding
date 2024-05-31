@@ -67,7 +67,7 @@ const HeroSlider = () => {
                       key={idx}
                       className={`${
                         idx === 0 ? "md:hidden" : "hidden md:inline-block"
-                      } w-full h-[70vh] object-center lg:h-[600px] object-cover lg:object-top pointer-events-none opacity-80`}
+                      } w-full h-[70vh] object-center lg:h-[600px] object-cover lg:object-top pointer-events-none opacity-90`}
                     />
                   ))}
                   <span className="absolute block w-full text-center font-inter font-medium text-white lg:text-[15px] bottom-10">
@@ -80,7 +80,7 @@ const HeroSlider = () => {
                   <Image
                     src={item.image}
                     alt="Landing hero section background image one"
-                    className="w-full h-[70vh] object-center lg:h-[600px] object-cover lg:object-top pointer-events-none opacity-80"
+                    className="w-full h-[70vh] object-center lg:h-[600px] object-cover lg:object-top pointer-events-none opacity-90"
                   />
                   <span className="absolute block w-full text-center font-inter font-medium text-white lg:text-[15px] bottom-10">
                     Byuda Holdings invests in sectors that are the building

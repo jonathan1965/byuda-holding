@@ -5,15 +5,6 @@ const Hero = () => {
   return (
     <section className="relative w-full">
       <div className="absolute w-full bottom-4 md:bottom-10 lg:bottom-16">
-        {/* <CenterContent>
-          <div className="w-full text-white">
-            <h1 className="text-2xl text-white lg:text-4xl">Byuda Holdings</h1>
-            <p className="max-w-2xl mt-3">
-              We are an innovative global healthcare company with one purpose: to chase the miracles
-              of science to improve people’s lives
-            </p>
-          </div>
-        </CenterContent> */}
       </div>
       <Image
         src={heroBg}
