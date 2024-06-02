@@ -33,6 +33,7 @@ const mobLinks = [
   {
     name: 'Sectors',
     url: '/sectors',
+    isNotNested: true,
     items: [
       { name: 'Hygiene', url: '/sectors/hygiene' },
       { name: 'Agriculture', url: '/sectors/agriculture' },
@@ -353,13 +354,27 @@ function OpenLink({
   return (
     <div>
       <div className="flex gap-10 items-center">
-        <Link
-          href={url}
-          onClick={() => close()}
-          className={`${open ? "text-red-300" : "text-white"} text-lg  capitalize`}
-        >
-          {name}
-        </Link>
+        {items.length > 0 ?
+        <button
+        href={url}
+        onClick={(e) => {
+          setOpen(!open)
+        }}
+        className={`${open ? "text-red-300" : "text-white"} text-lg  capitalize`}
+      >
+        {name}
+      </button>
+        : 
+      <Link
+        href={url}
+        onClick={(e) => {
+          close()
+        }}
+        className={`${open ? "text-red-300" : "text-white"} text-lg  capitalize`}
+      >
+        {name}
+      </Link>}
+        
         {items.length > 0 && (
           <button onClick={() => setOpen(!open)}>
             <Image src={downarrow} width={20} height={20} alt="arrow" />

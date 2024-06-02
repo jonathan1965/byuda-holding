@@ -37,7 +37,7 @@ const Footer = () => {
 
       <div className="w-full lg:w-11/12 max-w-[88.5rem] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3">
-          <div className="bg-[#7F0D1D] z-10 py-8 md:py-14 w-full mb-[150px]">
+          <div className="bg-[#7F0D1D] z-10 py-8 md:py-14 w-full md:mb-[150px]">
             <div className="flex flex-col items-center max-w-sm text-white lg:items-start lg:gap-10">
               <Image
                 src={byundaHoldingLogo}
