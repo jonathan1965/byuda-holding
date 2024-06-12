@@ -24,10 +24,24 @@ const sectors = [
 const parteners = [
   "FCC",
   "Keza Farmers's pride",
-  "Ishami Foundation",
-  "Amtoll",
+  "⁠Ishami Factory",
   "DSS",
 ];
+
+function getURl (link: string) {
+  if (link === "FCC") {
+    return "hygiene";
+  }
+  if (link === "Keza Farmers's pride") {
+    return "agribusiness";
+  }
+  if (link === "⁠Ishami Factory") {
+    return "manufacturing";
+  }
+  if (link === "DSS") {
+    return "dss";
+  }
+}
 
 const Footer = () => {
   return (
@@ -95,7 +109,7 @@ const Footer = () => {
                     key={index}
                     className="capitalize text-[14px] md:text-[15px]"
                   >
-                    <Link className="text-[#FFF3F5]" href="#"> {link}</Link>
+                    <Link className="text-[#FFF3F5]" href={`/sectors/${getURl(link)}`}>{link}</Link>
                   </li>
                 ))}
               </ul>

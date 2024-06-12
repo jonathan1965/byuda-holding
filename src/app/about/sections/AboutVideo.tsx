@@ -5,7 +5,7 @@ const AboutVideo = () => {
       <CenterContent>
         <h4 className="text-2xl font-medium text-dark-red md:hidden">Our legacy</h4>
         <div className="flex flex-col-reverse items-stretch mt-4 md:mt-6 md:flex-row gap-10">
-        <div className=" relative w-full md:w-[324px]">
+        <div className="relative w-full md:w-[484px]">
             <video
               muted
               autoPlay
@@ -13,7 +13,7 @@ const AboutVideo = () => {
               width={'100%'}
               height={'100%'}
               preload="none"
-              className="border-none min-h-full h-full w-full  block object-cover absolutea top-0 right-0 left-0 bottom-0"
+              className="border-none min-h-full h-full w-full  block object-contain md:object-cover absolutea top-0 right-0 left-0 bottom-0"
 
             >
               <source src="/vid/Byudashortvid.mp4" type="video/mp4" />

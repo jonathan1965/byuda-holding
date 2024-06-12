@@ -20,7 +20,7 @@ const PartenerCard: FC<Props> = ({ image, description, link }) => {
         <div>
           <p className="text-sm">{description}</p>
           <a href={link} className="flex items-center self-center mt-4 text-dark-red gap-10 lg:gap-3">
-            Get to know more about the First Cleaning company
+            Click to learn more
             <FiArrowRightCircle className="text-3xl" />
           </a>
         </div>

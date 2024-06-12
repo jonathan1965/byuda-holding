@@ -356,7 +356,6 @@ function OpenLink({
       <div className="flex gap-10 items-center">
         {items.length > 0 ?
         <button
-        href={url}
         onClick={(e) => {
           setOpen(!open)
         }}

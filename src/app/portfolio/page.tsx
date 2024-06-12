@@ -1,11 +1,10 @@
 import dssLogoBw from "@/assets/icons/dss-logo-bw.svg";
 import fccLogoBw from "@/assets/icons/fcc-logo-bw.svg";
 import kezaLogoBw from "@/assets/icons/keza-logo-bw.svg";
-import shamiLogoBw from "@/assets/icons/shami-logo-bw.svg";
+import shamiLogoBw from "@/assets/images/ishami.png";
 import CenterContent from "@/components/layouts/CenterContent";
 import ContactCTA from "@/components/shared-sections/Contact-CTA";
 import PageBreadcrumb from "@/components/shared-sections/PageBreadcrumb";
-import ContactUsCTA from "./sections/ContactUsCTA";
 import PartenerCard from "./sections/PartenerCard";
 
 const bwLogos = [
@@ -15,11 +14,11 @@ const bwLogos = [
       "First Cleaning Company ltd (FCC) is the leading provider of meticulous cleaning services in Rwanda. Specializing in residential, commercial, and specialized cleaning, our team is dedicated to delivering excellence in cleanliness. Impeccable standards are maintained through the use of industry-leading practices and environmentally conscious products. Spaces are transformed into pristine environments, prioritizing health and hygiene.",
     link:"/sectors/hygiene"
   },
-  // {
-  //   logo: shamiLogoBw,
-  //   description:
-  //     "Located in a strategic industrial zone, Ishami Factory is equipped with cutting-edge technology and adheres to the highest industry standards for quality, safety and Environment. The facility encompasses various stages of tobacco processing, from cultivation to packaging, ensuring efficiency and precision throughout the production chain. The factory also deals in Raw material Exports globally.",
-  // },
+  {
+    logo: shamiLogoBw,
+    description:
+      "Located in a strategic industrial zone, Ishami Factory is equipped with cutting-edge technology and adheres to the highest industry standards for quality, safety and Environment. The facility encompasses various stages of tobacco processing, from cultivation to packaging, ensuring efficiency and precision throughout the production chain. The factory also deals in Raw material Exports globally.",
+  },
   {
     logo: kezaLogoBw,
     description:
@@ -53,7 +52,7 @@ const page = () => {
         </div>
       </CenterContent>
       <ContactCTA />
-      <ContactUsCTA />
+      {/* <ContactUsCTA /> */}
     </div>
   );
 };

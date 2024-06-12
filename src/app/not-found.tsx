@@ -42,7 +42,7 @@ const Custom404 = () => {
             </div>
             <div className="flex gap-3 items-center">
               <MdMailOutline className="flex-shrink-0 block ml-px text-2xl text-[#FF656D]" />
-              <span className="block">info@byudagroup.com</span>
+              <span className="block">info@byudaholdings.com</span>
             </div>
           </div>
         </div>

@@ -45,7 +45,7 @@ function page() {
               </div>
               <div className="flex mt-4 gap-5">
                 <MdMailOutline className="flex-shrink-0 block ml-px text-2xl text-dark-red" />
-                <span className="block">info@byudagroup.com</span>
+                <span className="block">info@byudaholdings.com</span>
               </div>
               <div className="flex mt-6 gap-5 ">
                 <FaPhone className="flex-shrink-0 block ml-px text-2xl text-dark-red" />
