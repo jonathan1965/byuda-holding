@@ -32,7 +32,7 @@ const mobLinks = [
   },
   {
     name: 'Sectors',
-    url: '/sectors',
+    url: '',
     isNotNested: true,
     items: [
       { name: 'Hygiene', url: '/sectors/hygiene' },
@@ -47,23 +47,23 @@ const mobLinks = [
     items: [
       {
         name: 'FCC',
-        url: '/portfolio',
+        url: '/sectors/hygiene',
       },
       {
         name: 'Keza Farmers Pride',
-        url: '/portfolio',
+        url: '/sectors/agriculture',
       },
       {
-        name: 'Ishami Foundation',
-        url: '/portfolio',
+        name: '⁠Ishami Factory',
+        url: '/sectors/manufacturing',
       },
-      {
-        name: 'Amtoll',
-        url: '/portfolio',
-      },
+      // {
+      //   name: 'Amtoll',
+      //   url: '/sectors/agriculture',
+      // },
       {
         name: 'DSS',
-        url: '/portfolio',
+        url: '/sectors/labour',
       },
     ],
   },
