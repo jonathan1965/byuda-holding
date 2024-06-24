@@ -31,12 +31,12 @@ const VideoSection = () => {
             <video
               muted
               autoPlay
-              width={"100%"}
               loop
               preload="none"
+              width={"100%"}
               className="border-none min-h-full h-full w-full max-h-[300px]  block object-cover lg:absolute"
             >
-              <source src="/vid/Byudashortvid.mp4" type="video/mp4" />
+              <source src="/vid/Byudashortvid.webm" type="video/webm" />
               Your browser does not support the video tag.
             </video>
           </div>

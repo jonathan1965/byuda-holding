@@ -14,9 +14,8 @@ const AboutVideo = () => {
               height={'100%'}
               preload="none"
               className="border-none min-h-full h-full w-full  block object-contain md:object-cover absolutea top-0 right-0 left-0 bottom-0"
-
             >
-              <source src="/vid/Byudashortvid.mp4" type="video/mp4" />
+              <source src="/vid/Byudashortvid.webm" type="video/webm" />
               Your browser does not support the video tag.
             </video>
         </div>
