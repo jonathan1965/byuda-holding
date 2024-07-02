@@ -1,49 +1,43 @@
-import byundaHoldingLogo from "@/assets/icons/byuda-holding-logo-white.svg";
-import Image from "next/image";
-import Link from "next/link";
+'use client'
+import byundaHoldingLogo from '@/assets/icons/byuda-holding-logo-white.svg'
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import {
   FaFacebookF,
   FaInstagramSquare,
   FaTwitter,
   FaWhatsapp,
-} from "react-icons/fa";
+} from 'react-icons/fa'
 
 const quickLinks = [
-  "about",
-  "sectors",
-  "portfolio",
-  "newsroom",
-  "careers",
-  "contact",
-];
-const sectors = [
-  "hygiene Services",
-  "agribusiness",
-  "manufacturing",
-];
-const parteners = [
-  "FCC",
-  "Keza Farmers's pride",
-  "⁠Ishami Factory",
-  "DSS",
-];
+  'about',
+  'sectors',
+  'portfolio',
+  'newsroom',
+  'careers',
+  'contact',
+]
+const sectors = ['hygiene Services', 'agribusiness', 'manufacturing']
+const parteners = ['FCC', "Keza Farmers's pride", '⁠Ishami Factory', 'DSS']
 
-function getURl (link: string) {
-  if (link === "FCC") {
-    return "hygiene";
+function getURl(link: string) {
+  if (link === 'FCC') {
+    return 'hygiene'
   }
   if (link === "Keza Farmers's pride") {
-    return "agribusiness";
+    return 'agribusiness'
   }
-  if (link === "⁠Ishami Factory") {
-    return "manufacturing";
+  if (link === '⁠Ishami Factory') {
+    return 'manufacturing'
   }
-  if (link === "DSS") {
-    return "dss";
+  if (link === 'DSS') {
+    return 'dss'
   }
 }
 
 const Footer = () => {
+  const pathnameChunks = usePathname().split('/').filter(Boolean)
   return (
     <footer className="relative">
       <div className="absolute right-0 hidden w-3/5 h-full md:block bg-dark-red"></div>
@@ -80,7 +74,10 @@ const Footer = () => {
                     key={index}
                     className="capitalize text-[14px] md:text-[15px]"
                   >
-                    <Link className="text-[#FFF3F5]" href={link}> {link}</Link>
+                    <Link className="text-[#FFF3F5]" href={link}>
+                      {' '}
+                      {link}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -93,8 +90,16 @@ const Footer = () => {
                     key={index}
                     className="capitalize text-[14px] md:text-[15px]"
                   >
-                    <Link className="text-[#FFF3F5]" href={`sectors/${sector.split(" ").join("-")}`}>
-                      {" "}
+                    <Link
+                      className="text-[#FFF3F5]"
+                      // href={`sectors/${sector.split(' ').join('-')}`}
+                      href={`${
+                        pathnameChunks.includes('sector')
+                          ? `/${sector.split(' ').join('-')}`
+                          : `/sectors/${sector.split(' ').join('-')}`
+                      }`}
+                    >
+                      {' '}
                       {sector}
                     </Link>
                   </li>
@@ -109,7 +114,17 @@ const Footer = () => {
                     key={index}
                     className="capitalize text-[14px] md:text-[15px]"
                   >
-                    <Link className="text-[#FFF3F5]" href={`/sectors/${getURl(link)}`}>{link}</Link>
+                    <Link
+                      className="text-[#FFF3F5]"
+                      // href={`/sectors/${getURl(link)}`}
+                      href={`${
+                        pathnameChunks.includes('sector')
+                          ? `/${getURl(link)}`
+                          : `/sectors/${getURl(link)}`
+                      }`}
+                    >
+                      {link}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -137,6 +152,6 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
-export default Footer;
+  )
+}
+export default Footer
