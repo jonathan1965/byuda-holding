@@ -92,7 +92,7 @@ const servicePageData: CompanyInfo[] = [
       "Keza Farmers Pride ldt, is a trailblazing force in the agricultural sector that has been a beacon of change since its establishment with a focus on seamless supply chain management of agro-produce, The company has carved a niche for itself by championing a business model that not only prioritizes profitability but, more importantly, places a strong emphasis on the welfare and empowerment of farmers.",
   },
   {
-    pathEnd: "labour",
+    pathEnd: "dss",
     backgroundClass: "bg-[#9D1853]",
     textClass: "text-[#9D1853]",
     heroCoverImage: waiterCover,
