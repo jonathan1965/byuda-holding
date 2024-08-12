@@ -1,4 +1,3 @@
-"use client";
 import dssLogo from "@/assets/icons/dss-logo.svg";
 import fccLogo from "@/assets/icons/fcc-logo.svg";
 import ishamiLogo from "@/assets/icons/ishami-logo.svg";
@@ -92,6 +91,23 @@ const servicePageData: CompanyInfo[] = [
       "Keza Farmers Pride ldt, is a trailblazing force in the agricultural sector that has been a beacon of change since its establishment with a focus on seamless supply chain management of agro-produce, The company has carved a niche for itself by championing a business model that not only prioritizes profitability but, more importantly, places a strong emphasis on the welfare and empowerment of farmers.",
   },
   {
+    pathEnd: "labour",
+    backgroundClass: "bg-[#9D1853]",
+    textClass: "text-[#9D1853]",
+    heroCoverImage: waiterCover,
+    heroDescription:
+      "Byuda holdings prides its self in Transforming the lives of the population through Job creation by providing high-quality outsourced labor services, contributing to job creation and fostering economic transformation. Through its subsidiary DSS, the company strives to enhance productivity and efficiency, enabling organizations to focus on their core competencies while handling the workforce management aspects with precision and expertise.",
+    cardImage: waiter,
+    logoImage: dssLogo,
+    pag:"We are not just streamlining the local workforce – we are contributing to job creation and fostering economic transformation. Join us in building a brighter future for businesses and communities alike!",
+    learn:"Learn more about Dynamic services solution",
+    companyWebsite: "www.dss.rw",
+    companyEmail: "info@dss.rw",
+    cardTitle: "Unlock Your Business Potential",
+    companyDescription:
+      "Dynamic services solution (DSS) is a leading provider of outsourced labor services, dedicated to helping businesses streamline their operations and enhance productivity. Established in 2013, the company has grown into a trusted partner for organizations seeking cost-effective and efficient solutions to their staffing needs.",
+  },
+  {
     pathEnd: "dss",
     backgroundClass: "bg-[#9D1853]",
     textClass: "text-[#9D1853]",
@@ -108,14 +124,33 @@ const servicePageData: CompanyInfo[] = [
     companyDescription:
       "Dynamic services solution (DSS) is a leading provider of outsourced labor services, dedicated to helping businesses streamline their operations and enhance productivity. Established in 2013, the company has grown into a trusted partner for organizations seeking cost-effective and efficient solutions to their staffing needs.",
   },
+  {
+    pathEnd: "hygiene-Services",
+    backgroundClass: "bg-[#115AA8]",
+    heroDescription:
+      "Maintaining a clean and healthy workplace is not only a matter of aesthetics but also a crucial factor in promoting the well-being of employees and visitors. As one of the sectors invested in by Byuda Holdings, Hygiene services for companies encompass a range of activities aimed at creating and sustaining a clean, safe, and healthy environment.",
+    textClass: "text-[#115AA8]",
+    heroCoverImage: hygieneCover,
+    cardImage: doctor,
+    logoImage: fccLogo,
+    companyWebsite: "www.fccrwanda.rw",
+    cardTitle: "Ready to experience the magic?",
+    pag:"Let FCC be your cleaning wizardry partner. Unleash the magic, revel in the sparkle, and let your space become a testament to the enchantment we bring. ",
+    learn:"Learn more about the First cleaning company (FCC)",
+    companyEmail: "info@fccrwanda.rw",
+    companyDescription:
+      "First Cleaning Company ltd (FCC) is the leading provider of meticulous cleaning services in Rwanda. Specializing in residential, commercial, and specialized cleaning, our team is dedicated to delivering excellence in cleanliness. Impeccable standards are maintained through the use of industry-leading practices and environmentally conscious products. Spaces are transformed into pristine environments, prioritizing health and hygiene.",
+  },
 ];
 
-const Page = () => {
-  const pathnameChunks = usePathname().split("/").filter(Boolean);
-  const lastPathnameChunk = pathnameChunks[pathnameChunks.length - 1].split("-").join(" ");
+const Page = ( {params} : {
+  params: {
+    services: string;
+  };
+}) => {
 
   const activeData =
-    servicePageData.find((data) => data.pathEnd === lastPathnameChunk) || servicePageData[0];
+    servicePageData.find((data) => data.pathEnd === params.services) || servicePageData[0];
 
   return (
     <div>
@@ -185,3 +220,8 @@ const Page = () => {
   );
 };
 export default Page;
+
+
+export function generateStaticParams() {
+  return servicePageData.map((data) => ({ services: data.pathEnd }));
+}

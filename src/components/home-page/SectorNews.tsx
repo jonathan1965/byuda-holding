@@ -70,13 +70,16 @@ const SectorNews: FC<Props> = ({ hideTitle, hiddenCardId }) => {
             loop="true"
             speed="500"
             space-between="30"
-            css-mode="true"
+            css-mode="false"
           >
             {sectorNews
               .filter((item) => item.id !== hiddenCardId)
               .map((item, index) => (
                 <swiper-slide key={index}>
                   <Link
+                    onClick={(e)=>{
+                      e.stopPropagation()
+                    }}
                     href={`/newsroom/${item.id}`}
                     key={index}
                     className="group !hover:shadow-md !group-hover:shadow-md"

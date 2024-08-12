@@ -1,4 +1,3 @@
-"use client";
 import cleanAfrica from "@/assets/images/clean-africa.png";
 import maizeField from "@/assets/images/maize-field.png";
 import norrsken from "@/assets/images/norrsken.png";
@@ -7,7 +6,6 @@ import CenterContent from "@/components/layouts/CenterContent";
 import ContactCTA from "@/components/shared-sections/Contact-CTA";
 import PageBreadcrumb from "@/components/shared-sections/PageBreadcrumb";
 import Image, { StaticImageData } from "next/image";
-import { useParams } from "next/navigation";
 
 type Article = {
   id: string;
@@ -70,8 +68,10 @@ const articles: Article[] = [
   },
 ];
 
-const Page = () => {
-  const activeArticleId = useParams().id;
+const Page = ({params}:{
+  params: { id: string };
+}) => {
+  const activeArticleId = params.id;
   const activeArticle = articles.find((article) => article.id === activeArticleId) || articles[0];
   return (
     <div className="mt-10">
@@ -117,3 +117,8 @@ const Page = () => {
   );
 };
 export default Page;
+
+
+export function generateStaticParams() {
+  return articles.map((article) => ({ id: article.id }));
+}
